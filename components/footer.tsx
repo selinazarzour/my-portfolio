@@ -26,7 +26,7 @@ export const Footer = () => {
         </h1>
 
         <p className="my-5 text-center text-white-200 md:mt-10">
-          Let's connect and explore opportunities to collaborate and achieve
+          Let&apos;s connect and explore opportunities to collaborate and achieve
           remarkable results together.
         </p>
 
