@@ -18,7 +18,7 @@
 ## :rocket: Follow Me
 
 [![GitHub followers](https://img.shields.io/github/followers/selinazarzour?style=social&label=Follow&maxAge=2592000)](https://github.com/selinazarzour "Follow Me")
-[![Instagram](https://img.shields.io/instagram/url?style=social&url=https%3A%2F%2Finstagram.com%2Fselinazarzour)](https://instagram.com/intent/tweet?text=Wow:&url=https://github.com/selinazarzour/next-portfolio "Instagram")
+IG - @selinazarzour
 
 ## :books: Learn More
 
