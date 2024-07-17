@@ -3,12 +3,6 @@
 
 [![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/selinazarzour "Ask Me Anything!")
 [![GitHub license](https://img.shields.io/github/license/selinazarzour/next-portfolio)](https://github.com/selinazarzour/next-portfolio/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/selinazarzour/next-portfolio/commits/main "Maintenance")
-[![GitHub branches](https://badgen.net/github/branches/selinazarzour/next-portfolio)](https://github.com/selinazarzour/next-portfolio/branches "GitHub branches")
-[![Github commits](https://badgen.net/github/commits/selinazarzour/next-portfolio/main)](https://github.com/selinazarzour/next-portfolio/commits "Github commits")
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c26959a9-0124-4f3c-87ac-0cd3e6de5ab4/deploy-status)](https://portfolionext-js.netlify.app/ "Netlify Status")
-[![GitHub issues](https://img.shields.io/github/issues/selinazarzour/next-portfolio)](https://github.com/selinazarzour/next-portfolio/issues "GitHub issues")
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/selinazarzour/next-portfolio)](https://github.com/selinazarzour/next-portfolio/pulls "GitHub pull requests")
 
 ## ⚠️ Before you start
 
