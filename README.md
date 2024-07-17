@@ -1,4 +1,4 @@
-# Selina Zarzour's Modern & Minimalist Next.js Portfolio
+# Selina Zarzour's Modern Portfolio
 
 ![Modern & Minimalist Next.js Portfolio.](/.github/images/img_main.png "Modern & Minimalist Next.js Portfolio.")
 
@@ -17,16 +17,6 @@
 2. Clone this repository to your local computer.
 3. Open terminal in root directory. Run `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
 4. Now app is fully configured :+1: and you can start using this app using `npm run dev` or `yarn dev`.
-
-## :camera: Screenshots:
-
-![Modern UI/UX](/.github/images/img1.png "Modern UI/UX")
-
-![Project Showcase](/.github/images/img2.png "Project Showcase")
-
-![Work Experience](/.github/images/img3.png "Work Experience")
-
-![Build with Tailwind CSS](/.github/images/img4.png "Build with Tailwind CSS")
 
 ## :gear: Built with
 
