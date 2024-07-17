@@ -22,12 +22,12 @@ export const Footer = () => {
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          presence while continuing to change the world with me?
         </h1>
 
         <p className="my-5 text-center text-white-200 md:mt-10">
-          Reach out to me today and let&apos;s discuss how I can help your
-          achieve your goals.
+          Let's connect and explore opportunities to collaborate and achieve
+          remarkable results together.
         </p>
 
         <Link
@@ -54,7 +54,7 @@ export const Footer = () => {
             rel="noreferrer noopener"
             className="text-purple"
           >
-            Sanidhya
+            Selina
           </Link>{" "}
           |{" "}
           <Link href={links.sourceCode} className="underline">

@@ -1,17 +1,17 @@
 import { links } from "@/config";
 
 export const navItems = [
-  { name: "About", link: "#about" },
+  { name: "About Me", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "My thoughts", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ] as const;
 
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
+    title: "Co-founder - Director of Operations & Software Engineer at G12",
+    description: "Architected a full-stack web application, improving scalability and user experience by 30%.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -20,8 +20,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
+    title: "Flexible with Time Zone Communications",
+    description: "Able to coordinate and communicate effectively across different time zones.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -30,8 +30,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "Advanced AI Chat Bot Project",
+    description: "Engineered CSGPT PRO using React, Node, and Python, enhancing user satisfaction by 25%.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -40,7 +40,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Tech Enthusiast with a Passion for Development",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -48,11 +48,10 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    title: "Improving G12 Website",
+    description: "Currently enhancing the G12 website, focusing on improving user experience and functionality.",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -61,8 +60,8 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
+    title: "Interested in Starting a Project Together?",
+    description: "Let's collaborate and build something amazing.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -71,132 +70,143 @@ export const gridItems = [
   },
 ] as const;
 
+
 export const projects = [
   {
     id: 1,
-    title: "FigPro - Collaborative Design Tool",
-    des: "A collaborative design tool with real-time collaboration, vector editing, and a responsive UI.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://clone-figmaa.netlify.app",
-    sourceCode: "https://github.com/sanidhyy/figma-clone",
+    title: "CSGPT PRO - AI Chat Bot",
+    des: "Engineered an advanced AI Chat Bot using cosine similarity algorithms to deliver precise and instant responses to university and grade 12 students’ queries, enhancing user satisfaction by 25%.",
+    img: "/gallery.jpg",
+    iconLists: ["/re.svg", "/c.svg", "/cython.svg", "/python.svg"],
+    link: "https://devpost.com/software/csgptpro",
+    sourceCode: "https://github.com/selinazarzour/CSGPTPROAI",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://clone-yoom.netlify.app",
-    sourceCode: "https://github.com/sanidhyy/zoom-clone",
+    title: "Volontariato NSBE Hackathon Project",
+    des: "Developed a full-stack web application empowering travelers to explore the world with purpose and compassion. Integrated APIs like TripAdvisor and Soup API, increasing app engagement by 30%.",
+    img: "/Volontariato.jpeg",
+    iconLists: ["/nextjs.svg", "/css.svg", "/js.svg", "/mongodb.svg"],
+    link: "https://devpost.com/software/volontariato",
+    sourceCode: "https://github.com/DavDeDev/Volontariato.git",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://ai-imaginify.netlify.app",
-    sourceCode: "https://github.com/sanidhyy/imaginify",
+    title: "Math Research Project - Maths en Jeans",
+    des: "Collaborated on solving an unsolved problem involving an octahedron, determining the number of possibilities with varying colors using Python. Contributed over 400 lines of code to develop a solution and presented findings at an international congress.",
+    img: "/octahedre.png",
+    iconLists: ["/python.svg"],
+    link: "https://github.com/selinazarzour/MathEnJeans",
+    sourceCode: "https://github.com/selinazarzour/MathEnJeans",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://app-iphone.netlify.app",
-    sourceCode: "https://github.com/sanidhyy/apple-clone",
+    title: "G12 Platform Enhancement",
+    des: "Enhanced website functionality and user experience of G12, resulting in a 20% increase in user engagement. Currently leading Phase 2 of 100% automation AI, developing a Chrome extension with voice recognition and chatbot capabilities.",
+    img: "/g12.png",
+    iconLists: ["/re.svg", "/vite.svg", "/js.svg", "/css.svg"],
+    link: "https://g12uni.com",
+    sourceCode: "https://g12uni.com",
+  },
+  {
+    id: 5,
+    title: "Information Technology Support Specialist",
+    des: "Set up technical tutorials and published them using Python, troubleshooting computer problems for students, faculty, and staff, improving technical skills by 20%.",
+    img: "/p5.png",
+    iconLists: ["/youtube.svg"],
+    link: "https://www.youtube.com/@selinazarzour3266/videos",
+    sourceCode: "https://www.youtube.com/@selinazarzour3266/videos",
   },
 ] as const;
 
+
 export const testimonials = [
   {
-    quote: `Collaborating with ${links.ownerName} was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ${links.ownerName}'s enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, ${links.ownerName} is the ideal partner.`,
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: `As Co-Founder and Director of Operations at G12, I'm dedicated to revolutionizing how Grade 12 students navigate their educational journey. Together with my team, we're creating a platform that not only connects students with mentors and advisors but also simplifies the complex process of university and major selection.`,
+    name: "Selina Zarzour",
+    title: "Co-Founder and Director of Operations at G12",
   },
   {
-    quote: `Collaborating with ${links.ownerName} was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ${links.ownerName}'s enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, ${links.ownerName} is the ideal partner.`,
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: `Growing up in the Middle East, I've been shaped by a rich tapestry of cultures and perspectives. This upbringing fuels my passion for fostering inclusivity and innovation in everything I do.`,
+    name: "Selina Zarzour",
+    title: "A Young Woman Raised in the Middle East",
   },
   {
-    quote: `Collaborating with ${links.ownerName} was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ${links.ownerName}'s enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, ${links.ownerName} is the ideal partner.`,
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: `I approach every challenge with an open mind and a commitment to inspire positive change. Whether it's through technology, mentoring, or community engagement, I strive to empower others to reach their full potential.`,
+    name: "Selina Zarzour",
+    title: "An Open-Minded, Motivational Person",
   },
   {
-    quote: `Collaborating with ${links.ownerName} was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ${links.ownerName}'s enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, ${links.ownerName} is the ideal partner.`,
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: `I believe in the transformative power of technology, machine learning, and AI to build a better world for all. Through my work, I'm dedicated to creating solutions that drive meaningful impact and empower communities.`,
+    name: "Selina Zarzour",
+    title: "On a Mission to Make a Positive Impact",
   },
-  {
-    quote: `Collaborating with ${links.ownerName} was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ${links.ownerName}'s enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, ${links.ownerName} is the ideal partner.`,
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
+  // {
+  //   quote: `Collaborating with ${links.ownerName} was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ${links.ownerName}'s enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, ${links.ownerName} is the ideal partner.`,
+  //   name: "Selina Zarzour",
+  //   title: "Director of AlphaStream Technologies",
+  // },
 ] as const;
 
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    name: "g12",
+    img: "/g12icon.png",
+    nameImg: "/G12.svg",
   },
   {
     id: 2,
     name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    img: "/Googlelogo.svg",
+    nameImg: "/google-1-1-logo-svgrepo-com.svg",
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    name: "Conrad Business School",
+    img: "/ConradIcon.png",
+    nameImg: "/Conrad.svg",
   },
   {
     id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    name: "UTAT",
+    img: "/utaticon.png",
+    nameImg: "/utat.svg",
   },
   {
     id: 5,
     name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    img: "/microsofticon.png",
+    nameImg: "/microsoft.png",
   },
 ] as const;
 
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Co-Founder, COO & Director of Operations",
+    desc: "Led strategic execution and operational oversight at G12, transforming it into a dynamic platform connecting Grade 12 students with mentors and advisors.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Google Cloud For Startups Partnership",
+    desc: "Collaborated with Google Cloud to enhance G12's platform, receiving guidance and technical support to deliver greater user value.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Entreprise Conrad Intern",
+    desc: "Collaborated with G12 team to enhance website functionality and streamline communication during co-op at Entreprise Conrad.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Lead Project Manager, Biomedical Engineering",
+    desc: "Led design projects at University of Toronto focusing on e-textile solutions for patient care, managing timelines and stakeholder communication.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -206,21 +216,21 @@ export const socialMedia = [
   {
     name: "GitHub",
     img: "/git.svg",
-    link: "https://github.com/sanidhyy",
+    link: "https://github.com/selinazarzour",
   },
-  {
-    name: "Twitter",
-    img: "/twit.svg",
-    link: "https://twitter.com/TechnicalShubam",
-  },
+  // {
+  //   name: "Twitter",
+  //   img: "/twit.svg",
+  //   link: "https://x.com/Selina_Tech",
+  // },
   {
     name: "LinkedIn",
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/sanidhyy",
+    link: "https://www.linkedin.com/in/selinazarzour",
   },
 ] as const;
 
 export const techStack = {
-  stack1: ["React.js", "Next.js", "Typescript"],
-  stack2: ["Vue.js", "AWS", "MongoDB"],
+  stack1: ["JS", "React", "Node", "Python"],
+  stack2: ["ML", "Google Colab", "Node", "Python"],
 } as const;

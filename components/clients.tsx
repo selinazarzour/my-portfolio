@@ -7,7 +7,7 @@ export const Clients = () => {
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading">
-        Kind words from <span className="text-purple">satisfied clients</span>
+        Exploring My <span className="text-purple">Journey</span> and <span className="text-purple">Vision.</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">

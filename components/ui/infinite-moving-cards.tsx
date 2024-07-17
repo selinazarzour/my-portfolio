@@ -112,7 +112,7 @@ export const InfiniteMovingCards = ({
                   <Image
                     height={50}
                     width={50}
-                    src="/profile.svg"
+                    src="/profile.jpeg"
                     alt="profile"
                   />
                 </div>
