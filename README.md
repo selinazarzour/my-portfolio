@@ -1,6 +1,5 @@
 # Selina Zarzour's Modern Portfolio
 
-![Modern & Minimalist Next.js Portfolio.](/.github/images/img_main.png "Modern & Minimalist Next.js Portfolio.")
 
 [![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/selinazarzour "Ask Me Anything!")
 [![GitHub license](https://img.shields.io/github/license/selinazarzour/next-portfolio)](https://github.com/selinazarzour/next-portfolio/blob/main/LICENSE "GitHub license")
