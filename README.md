@@ -15,15 +15,10 @@
 
 [![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Three JS](https://skillicons.dev/icons?i=threejs "Three JS")](https://threejs.org/ "Three JS") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Netlify](https://skillicons.dev/icons?i=netlify "Netlify")](https://netlify.app/ "Netlify")
 
-## :raised_hands: Contribute
-
-You might encounter some bugs while using this app. You are more than welcome to contribute. Just submit changes via pull request and I will review them before merging. Make sure you follow community guidelines.
-
 ## :rocket: Follow Me
 
 [![GitHub followers](https://img.shields.io/github/followers/selinazarzour?style=social&label=Follow&maxAge=2592000)](https://github.com/selinazarzour "Follow Me")
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fselinazarzour)](https://twitter.com/intent/tweet?text=Wow:&url=https://github.com/selinazarzour/next-portfolio "Tweet")
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@selinazarzour3266 "Subscribe to my Channel")
+[![Instagram](https://img.shields.io/instagram/url?style=social&url=https%3A%2F%2Finstagram.com%2Fselinazarzour)](https://instagram.com/intent/tweet?text=Wow:&url=https://github.com/selinazarzour/next-portfolio "Instagram")
 
 ## :books: Learn More
 
