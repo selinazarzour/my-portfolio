@@ -62,11 +62,11 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
+        containerRef.current.style.setProperty("--animation-duration", "10s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "15s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "15s");
       }
     }
   };
@@ -93,6 +93,7 @@ export const InfiniteMovingCards = ({
 
   const handleTouchEnd = () => {
     setIsDragging(false);
+    centerCard();
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -109,6 +110,27 @@ export const InfiniteMovingCards = ({
     const x = e.touches[0].pageX - containerRef.current!.offsetLeft;
     const walk = (x - startX) * 3; // The scroll speed
     containerRef.current!.scrollLeft = scrollLeft - walk;
+  };
+
+  const centerCard = () => {
+    if (containerRef.current && scrollerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      const scrollLeft = containerRef.current.scrollLeft;
+      const cards = scrollerRef.current.children;
+      let cardWidth = 0;
+
+      if (cards.length > 0) {
+        cardWidth = cards[0].clientWidth;
+      }
+
+      const index = Math.round(scrollLeft / cardWidth);
+      const centeredScrollLeft = index * cardWidth - (containerWidth - cardWidth) / 2;
+
+      containerRef.current.scrollTo({
+        left: centeredScrollLeft,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
