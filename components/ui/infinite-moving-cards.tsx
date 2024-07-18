@@ -22,6 +22,10 @@ export const InfiniteMovingCards = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
   const [start, setStart] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const addAnimation = () => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
@@ -67,6 +71,28 @@ export const InfiniteMovingCards = ({
     }
   };
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current!.offsetLeft);
+    setScrollLeft(containerRef.current!.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current!.offsetLeft;
+    const walk = (x - startX) * 3; // The scroll speed
+    containerRef.current!.scrollLeft = scrollLeft - walk;
+  };
+
   useEffect(() => {
     addAnimation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -79,6 +105,10 @@ export const InfiniteMovingCards = ({
         "scroller relative z-20 w-screen overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
     >
       <ul
         ref={scrollerRef}
