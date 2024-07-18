@@ -64,9 +64,9 @@ export const InfiniteMovingCards = ({
       if (speed === "fast") {
         containerRef.current.style.setProperty("--animation-duration", "10s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
+        containerRef.current.style.setProperty("--animation-duration", "15s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "30s");
+        containerRef.current.style.setProperty("--animation-duration", "20s");
       }
     }
   };
@@ -103,12 +103,20 @@ export const InfiniteMovingCards = ({
       let targetIndex;
 
       if (clickPosition < containerWidth / 2) {
-        targetIndex = Math.max(0, currentIndex - 1);
+        targetIndex = currentIndex - 1;
+        if (targetIndex < 0) {
+          targetIndex = items.length - 1;
+          containerRef.current.scrollLeft += items.length * cardWidth;
+        }
       } else {
-        targetIndex = Math.min(items.length - 1, currentIndex + 1);
+        targetIndex = currentIndex + 1;
+        if (targetIndex >= items.length) {
+          targetIndex = 0;
+          containerRef.current.scrollLeft -= items.length * cardWidth;
+        }
       }
 
-      const targetScrollLeft = targetIndex * cardWidth;
+      const targetScrollLeft = targetIndex * cardWidth + (cardWidth - containerWidth) / 2;
       containerRef.current.scrollTo({
         left: targetScrollLeft,
         behavior: "smooth",
