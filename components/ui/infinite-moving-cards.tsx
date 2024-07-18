@@ -78,16 +78,23 @@ export const InfiniteMovingCards = ({
   };
 
   const handleMouseLeave = () => {
-    setIsDragging(false);
+    if (isDragging) {
+      setIsDragging(false);
+      containerRef.current!.style.setProperty("animation-play-state", "running");
+    }
   };
 
   const handleMouseUp = () => {
-    setIsDragging(false);
+    if (isDragging) {
+      setIsDragging(false);
+      containerRef.current!.style.setProperty("animation-play-state", "running");
+    }
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
+    containerRef.current!.style.setProperty("animation-play-state", "paused");
     const x = e.pageX - containerRef.current!.offsetLeft;
     const walk = (x - startX) * 3; // The scroll speed
     containerRef.current!.scrollLeft = scrollLeft - walk;
@@ -140,8 +147,8 @@ export const InfiniteMovingCards = ({
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      onClick={handleClick}
-    >
+      // onClick={handleClick}
+          >
       <ul
         ref={scrollerRef}
         className={cn(
