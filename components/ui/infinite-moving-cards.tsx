@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
 import { testimonials } from "@/data";
 import { cn } from "@/lib/utils";
 
@@ -29,14 +28,12 @@ export const InfiniteMovingCards = ({
   const addAnimation = () => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
-
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         if (scrollerRef.current) {
           scrollerRef.current.appendChild(duplicatedItem);
         }
       });
-
       getDirection();
       getSpeed();
       setStart(true);
@@ -62,11 +59,11 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "10s");
+        containerRef.current.style.setProperty("--animation-duration", "20s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "15s");
+        containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "15s");
+        containerRef.current.style.setProperty("--animation-duration", "80s");
       }
     }
   };
@@ -89,6 +86,7 @@ export const InfiniteMovingCards = ({
 
   const handleMouseUp = () => {
     setIsDragging(false);
+    centerCard();
   };
 
   const handleTouchEnd = () => {
@@ -100,7 +98,7 @@ export const InfiniteMovingCards = ({
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current!.offsetLeft;
-    const walk = (x - startX) * 3; // The scroll speed
+    const walk = (x - startX) * 1.5; // The scroll speed
     containerRef.current!.scrollLeft = scrollLeft - walk;
   };
 
@@ -108,7 +106,7 @@ export const InfiniteMovingCards = ({
     if (!isDragging) return;
     e.preventDefault();
     const x = e.touches[0].pageX - containerRef.current!.offsetLeft;
-    const walk = (x - startX) * 3; // The scroll speed
+    const walk = (x - startX) * 1.5; // The scroll speed
     containerRef.current!.scrollLeft = scrollLeft - walk;
   };
 
