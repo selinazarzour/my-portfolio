@@ -147,7 +147,7 @@ export const InfiniteMovingCards = ({
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      // onClick={handleClick}
+      onClick={handleClick}
           >
       <ul
         ref={scrollerRef}
