@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+
 import { testimonials } from "@/data";
 import { cn } from "@/lib/utils";
 
@@ -28,12 +29,14 @@ export const InfiniteMovingCards = ({
   const addAnimation = () => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
+
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         if (scrollerRef.current) {
           scrollerRef.current.appendChild(duplicatedItem);
         }
       });
+
       getDirection();
       getSpeed();
       setStart(true);
@@ -59,11 +62,11 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
+        containerRef.current.style.setProperty("--animation-duration", "10s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "20s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "30s");
       }
     }
   };
@@ -74,58 +77,40 @@ export const InfiniteMovingCards = ({
     setScrollLeft(containerRef.current!.scrollLeft);
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - containerRef.current!.offsetLeft);
-    setScrollLeft(containerRef.current!.scrollLeft);
-  };
-
   const handleMouseLeave = () => {
     setIsDragging(false);
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    centerCard();
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-    centerCard();
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current!.offsetLeft;
-    const walk = (x - startX) * 1.5; // The scroll speed
+    const walk = (x - startX) * 3; // The scroll speed
     containerRef.current!.scrollLeft = scrollLeft - walk;
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - containerRef.current!.offsetLeft;
-    const walk = (x - startX) * 1.5; // The scroll speed
-    containerRef.current!.scrollLeft = scrollLeft - walk;
-  };
-
-  const centerCard = () => {
+  const handleClick = (e: React.MouseEvent) => {
     if (containerRef.current && scrollerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
-      const scrollLeft = containerRef.current.scrollLeft;
-      const cards = scrollerRef.current.children;
-      let cardWidth = 0;
+      const clickPosition = e.pageX - containerRef.current.offsetLeft;
+      const cardWidth = scrollerRef.current.children[0].clientWidth + 16; // card width + gap
+      const currentIndex = Math.round(containerRef.current.scrollLeft / cardWidth);
 
-      if (cards.length > 0) {
-        cardWidth = cards[0].clientWidth;
+      let targetIndex;
+
+      if (clickPosition < containerWidth / 2) {
+        targetIndex = Math.max(0, currentIndex - 1);
+      } else {
+        targetIndex = Math.min(items.length - 1, currentIndex + 1);
       }
 
-      const index = Math.round(scrollLeft / cardWidth);
-      const centeredScrollLeft = index * cardWidth - (containerWidth - cardWidth) / 2;
-
+      const targetScrollLeft = targetIndex * cardWidth;
       containerRef.current.scrollTo({
-        left: centeredScrollLeft,
+        left: targetScrollLeft,
         behavior: "smooth",
       });
     }
@@ -147,9 +132,7 @@ export const InfiniteMovingCards = ({
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      onTouchMove={handleTouchMove}
+      onClick={handleClick}
     >
       <ul
         ref={scrollerRef}
