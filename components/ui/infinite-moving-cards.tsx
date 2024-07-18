@@ -77,6 +77,12 @@ export const InfiniteMovingCards = ({
     setScrollLeft(containerRef.current!.scrollLeft);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - containerRef.current!.offsetLeft);
+    setScrollLeft(containerRef.current!.scrollLeft);
+  };
+
   const handleMouseLeave = () => {
     setIsDragging(false);
   };
@@ -85,10 +91,22 @@ export const InfiniteMovingCards = ({
     setIsDragging(false);
   };
 
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current!.offsetLeft;
+    const walk = (x - startX) * 3; // The scroll speed
+    containerRef.current!.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - containerRef.current!.offsetLeft;
     const walk = (x - startX) * 3; // The scroll speed
     containerRef.current!.scrollLeft = scrollLeft - walk;
   };
@@ -109,6 +127,9 @@ export const InfiniteMovingCards = ({
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchMove={handleTouchMove}
     >
       <ul
         ref={scrollerRef}
