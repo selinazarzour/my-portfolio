@@ -128,7 +128,11 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 2 && <GridGlobe />}
+          {id === 2 && (
+            <div className="relative z-10">
+              <GridGlobe />
+            </div>
+          )}
 
           {id === 3 && (
             <div className="absolute -right-3 flex w-fit gap-1 lg:-right-2 lg:gap-5">
