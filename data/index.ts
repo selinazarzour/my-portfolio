@@ -4,6 +4,8 @@ export const navItems = [
   { name: "About Me", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "My thoughts", link: "#testimonials" },
+  { name: "Certificates", link: "#certificates" },
+  { name: "Resume", link: "#resume" },
   { name: "Contact", link: "#contact" },
 ] as const;
 
@@ -15,7 +17,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/b1.png",
     spareImg: "",
   },
   {

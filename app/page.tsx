@@ -6,6 +6,8 @@ import { Grid } from "@/components/grid";
 import { Hero } from "@/components/hero";
 import { FloatingNav } from "@/components/ui/floating-nav";
 import { RecentProjects } from "@/components/recent-projects";
+import { CertificatesSection } from "@/components/certificates";
+import { ResumeSection } from "@/components/resume-section";
 import { navItems } from "@/data";
 
 const MainPage = () => {
@@ -17,6 +19,8 @@ const MainPage = () => {
         <Hero />
         <Grid />
         <RecentProjects />
+        <CertificatesSection />
+        <ResumeSection />
         <Clients />
         <Experience />
         <Approach />
