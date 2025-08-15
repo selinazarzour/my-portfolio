@@ -22,8 +22,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "AI Student Researcher – MED Research Group (UofT)",
-    description: "Advancing healthcare diagnostics by developing multimodal AI models for swallowing disorder analysis, under the supervision of Prof. Ervin Sejdic and Ayman Anwar. Sole undergraduate on the team.",
+    title: "Undergraduate Researcher – Multimodal AI for Clinical Reporting (UofT)",
+    description: "Conducting research on multimodal AI for clinical report generation from 3D CT scans under Prof. Ervin Sejdic and PhD candidate Ayman Anwar. Developing and training deep learning models (CNNs, 3D ResNet) for medical image analysis, integrating tabular and imaging data, and building end-to-end pipelines for automated clinical reporting. Led experiments on the CT-RATE dataset, including feature extraction, multitask classification, and LLM fine-tuning. Contributed to technical presentations, manuscript preparation, and weekly research meetings as the sole undergraduate team member.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -81,6 +81,51 @@ export const projects = [
     iconLists: ["/re.svg", "/python.svg", "/firebase.svg"],
     link: "https://devpost.com/software/crave-well",
     sourceCode: "",
+  },
+  {
+    id: 12,
+    title: "ShifAI: AI-Powered Healthcare Assistant",
+    des: "ShifAI is a multilingual AI-powered healthcare assistant designed to make healthcare more accessible, especially in regions with limited resources or language barriers. Features include AI-driven symptom triage, real-time alerts, patient-owned records, interim AI advice, and a doctor dashboard. Available in Arabic, English, and French.",
+    img: "/shifa-ai-picture.png",
+    iconLists: ["/re.svg", "/vite.svg", "/ts.svg", "/node.svg", "/firebase.svg", "/ai.svg"],
+    link: "https://github.com/selinazarzour/shifai-health-assistant",
+    sourceCode: "https://github.com/selinazarzour/shifai-health-assistant",
+  },
+  {
+    id: 13,
+    title: "Selina’s Custom Virtual Fashion Studio – AI-Powered Virtual Try-On Web App",
+    des: "Interactive web app leveraging AI and diffusion models for virtual try-on, avatar swaps, and creative backgrounds using images or text prompts. Built with Python, Gradio, OpenCV, and RapidAPI. Features multi-modal input, real-time generation, and secure credential management.",
+    img: "/virtual-try-on-image.png",
+    iconLists: ["/python.svg", "/ai.svg"],
+    link: "https://github.com/selinazarzour/selina-custom-virtual-try-on",
+    sourceCode: "https://github.com/selinazarzour/selina-custom-virtual-try-on",
+  },
+  {
+    id: 14,
+    title: "Universal Virtual Try-On Chrome Extension – AI-Powered Clothing Fitting for Any Online Store",
+    des: "Chrome extension that lets users virtually try on clothes from any online store using AI. Features drag-and-drop, copy-paste, direct image selection, smart detection, secure backend proxy, and a modern UI. Demonstrates advanced browser extension and AI integration.",
+    img: "/virtual-try-on-image-chrome.jpeg",
+    iconLists: ["/ai.svg", "/js.svg", "/chrome.svg"],
+    link: "https://www.linkedin.com/in/selinazarzour/details/projects/553062741/multiple-media-viewer?profileId=ACoAAC8NmJgBR7NhMG97IDmGZ0D4mFTXHcXEJxs&treasuryMediaId=1754308868182&type=IMAGE",
+    sourceCode: "",
+  },
+  {
+    id: 15,
+    title: "HealthGPT – Fine-Tuning a Medical Question-Answering LLM",
+    des: "Developed a domain-specific chatbot for medical Q&A by fine-tuning TinyLLaMA-1.1B-Chat with 16,000+ MedQuad pairs. Used LoRA, 4-bit quantization, and Hugging Face tools for efficient training and deployment. Hosted on Hugging Face Hub, focused on radiology and CT/VFSS.",
+    img: "/health-gpt.png",
+    iconLists: ["/python.svg", "/ai.svg", "/huggingface.svg"],
+    link: "https://huggingface.co/selinazarzour/healthgpt-tinyllama",
+    sourceCode: "https://huggingface.co/selinazarzour/healthgpt-tinyllama",
+  },
+  {
+    id: 16,
+    title: "AI-Powered Research Assistant with MCP & LLM Integration",
+    des: "Deployable research assistant using Model Context Protocol (MCP) and FastAPI, integrated with arXiv for academic paper retrieval and prompt generation for LLMs like Claude and GPT. Demonstrates LLM, generative AI, and API integration.",
+    img: "/mcp-server-arxiv-paper-search.png",
+    iconLists: ["/ai.svg", "/python.svg"],
+    link: "https://github.com/selinazarzour/mcp-server",
+    sourceCode: "https://github.com/selinazarzour/mcp-server",
   },
   {
     id: 2,
@@ -261,8 +306,8 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "AI Student Researcher – MED Research Group, UofT",
-    desc: "Conducting hands-on research in AI and machine learning for healthcare, developing multimodal models to improve clinical swallowing diagnostics under Prof. Ervin Sejdic and Ayman Anwar.",
+    title: "Undergraduate Researcher – Multimodal AI for Clinical Reporting, UofT",
+    desc: "Conducting research on multimodal AI for clinical report generation from 3D CT scans under Prof. Ervin Sejdic and PhD candidate Ayman Anwar. Developing and training deep learning models (CNNs, 3D ResNet) for medical image analysis, integrating tabular and imaging data, and building end-to-end pipelines for automated clinical reporting. Led experiments on the CT-RATE dataset, including feature extraction, multitask classification, and LLM fine-tuning. Contributed to technical presentations, manuscript preparation, and weekly research meetings as the sole undergraduate team member.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -323,5 +368,5 @@ export const socialMedia = [
 
 export const techStack = {
   stack1: ["JS", "React", "Node", "Python"],
-  stack2: ["ML", "Google Colab", "Node", "Python"],
+  stack2: ["ML", "Google Colab", "Node", "Python", "TypeScript", "Vite", "Hugging Face", "FastAPI", "Chrome Extensions"],
 } as const;

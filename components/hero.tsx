@@ -37,7 +37,7 @@ export const Hero = () => {
           />
 
           <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-            Hi, I&apos;m {links.ownerName}, a computer engineering student at the University Of Toronto and Co-Founder of G12.
+            Hi, I&apos;m {links.ownerName}—an open-source AI enthusiast, undergraduate researcher, and builder passionate about making real-world impact through technology. My open-source medical AI model has reached 1,900+ downloads, and I work closely with PhD researchers to advance clinical AI for healthcare. I thrive on curiosity, collaboration, and creating tools that empower others.
           </p>
 
           <Link href="#about" className="md:mt-10">

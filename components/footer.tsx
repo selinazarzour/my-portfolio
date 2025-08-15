@@ -21,8 +21,7 @@ export const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence while continuing to change the world with me?
+          Driven by curiosity, collaboration, and a passion for building AI that <span className="text-purple">empowers people</span>, let's create something impactful together.
         </h1>
 
         <p className="my-5 text-center text-white-200 md:mt-10">

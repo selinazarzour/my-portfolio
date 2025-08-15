@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const RESUME_PDF = "/resume.pdf"; // Place your resume PDF in the public/ folder
+const RESUME_PDF = "/resume_ai.pdf"; // Place your resume PDF in the public/ folder
 
 export const ResumeSection = () => {
     const [showFull, setShowFull] = useState(false);

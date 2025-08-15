@@ -20,6 +20,9 @@ export const metadata: Metadata = siteConfig;
 const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           {children}
